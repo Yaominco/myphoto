@@ -1,0 +1,16 @@
+<!--pages/mine/mine.wxml-->
+<view class="container">
+<block wx:if="{{!hasUserInfo}}">
+<button bindtap="getUserInfo">获取用户信息</button>
+</block>
+<block wx:else>
+<image src="{{userInfo.avatarUrl}}" style="border-radius: 50%; height:400rpx;width:400rpx;" bindtap="modifyAvatar"/>
+<text style="padding-top: 100rpx; font-size: 50rpx;" hidden="{{isModify}}">{{userInfo.nickName}}</text>
+<form bindsubmit="modifynickname">
+  <input type="text" name="nickname" style="margin-top: 100rpx; padding: 10rpx;font-size: 50rpx; border:2rpx solid #ddd;" hidden="{{!isModify}}" value="{{userInfo.nickName}}"/>
+<button form-type="submit" type="primary" style="margin-top: 100rpx;">
+{{btnTitle}}
+</button>
+</form>
+</block>
+</view>

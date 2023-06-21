@@ -1,0 +1,13 @@
+/* pages/mine/mine.wxss */
+.root{
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+}
+.touxiang{
+  width:200rpx;
+  height:200rpx;
+  border-radius:50%;
+  margin-top:30rpx;
+  margin-bottom:10rpx;
+}

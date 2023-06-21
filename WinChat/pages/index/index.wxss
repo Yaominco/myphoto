@@ -1,0 +1,38 @@
+/**index.wxss**/
+.index_scroll{
+  padding:50rpx 40rpx;
+  box-sizing: border-box;
+}
+.srcoll_v1{
+  display: flex;
+  flex-wrap: wrap;
+}
+.v1_view{
+  flex: none;
+  width: 50%;
+  height: 300rpx;
+  box-sizing: border-box;
+  padding: 6rpx;
+  position: relative;
+}
+.checkbox_v1{
+  position: absolute;
+}
+.imgUrl{
+  width: 100%;
+  height: 100%;
+}
+.v2{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 10rpx 20rpx;
+
+}
+.txt{
+  color: #00f;
+  text-decoration: underline;
+}

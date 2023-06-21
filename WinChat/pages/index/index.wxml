@@ -1,0 +1,21 @@
+<swiper indicator-dots="{{true}}" current="{{currentIndex}}" autoplay>
+<swiper-item wx:for="{{covers}}" wx:key="*this">
+<image src="{{item.accessUrl}}" style="width: 100%;" mode="widthFix"></image>
+</swiper-item>
+</swiper>
+<scroll-view style="padding: 60rpx 40rpx;box-sizing: border-box;">
+<view style="display: flex;flex-wrap: wrap;">
+<view wx:for="{{photoList}}" wx:key="*this" wx:for-item="photo" style="flex:none;width:50%;height:300rpx;box-sizing:border-box;padding:6rpx;position:relative;">
+<checkbox mark:photoId="{{photo.photoId}}" mark:index="{{index}}" style="position: absolute;" hidden="{{!delSelect}}" bindtap="checkedPhoto" checked="{{selectList[index]}}"/>
+<image src="{{photo.photoAccessUrl}}" mode="" style="width: 100%;height: 100%;" bindlongpress="enabelDelSelect" bindtap="showImage" mark:index="{{index}}"/>
+</view>
+</view>
+</scroll-view>
+
+<button loading="{{loadding}}" style="background: #fff;"></button>
+<view style="position: fixed;bottom: 0;width: 100%;display: flex;justify-content: space-between;box-sizing: border-box;padding: 10rpx 20rpx;" wx:if="{{delSelect}}">
+<text bindtap="cancelSelect" style="color: #00f;text-decoration: underline;">取消</text>
+<text bindtap="selectAll" style="color: #00f;text-decoration: underline;">全选</text>
+<text bindtap="deletePhoto" style="color: #00f;text-decoration: underline;">删除</text>
+
+</view>

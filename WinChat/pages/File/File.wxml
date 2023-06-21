@@ -1,0 +1,8 @@
+<!--pages/File/File.wxml-->
+<view style="padding:40rpx;box-sizing: border-box;display: block;">
+<view style="text-align: center;color: #f00;">点击以下图片选择相片</view>
+
+<image src="{{filePath}}" style="width: 100%;" mode="{{mode}}" bindtap="selectPhoto"></image>
+
+<button bindtap="uploadPhoto" disabled="{{!isSelectImg}}" type="primary">上传</button>
+</view>
